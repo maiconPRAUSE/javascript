@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 18px;
+            font-size: 19px;
+            border-radius: 10px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+
+    <button onclick="somar()">Iniciar a soma</button>
+
+    <div id="res">
+        <p>O resultado vem  aqui...</p>
+    </div>
+
+    <script>
+        function somar(){
+            let n1 = Number(window.prompt('Informe o primeiro valor:'))
+            let n2 = Number(window.prompt('Informe o segundo valor:'))
+            let res = window.document.getElementById('res')
+            soma = n1 + n2
+            res.innerHTML = `A soma entre <code>
+                <mark>${n1}</mark>
+            </code> e <code>
+                <mark>${n2}</mark>
+            </code> é igual a <code><strong>${soma}</strong></code>`
+
+        }
+    </script>
+
+</body>
+</html>
