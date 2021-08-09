@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando a idade</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando a idade</h1>
+    <button onclick="idade()">Iniciar</button>
+    <div id="saida">
+        <p>O resultado vai aparecer aqui...</p>
+    </div>
+    <script>
+        function idade(){
+            let data = new Date()
+            let anoNasc = Number(window.prompt('Em que ano você nasceu?'))
+            let anoAtual = data.getFullYear()
+            let saida = window.document.querySelector('div#saida')
+            idadeAtual = anoAtual - anoNasc
+            
+            saida.innerHTML = `<p>Quem nasceu em ${anoNasc} vai completar <strong>${idadeAtual}</strong> anos em ${anoAtual}.</p>`
+        }
+    </script>
+</body>
+</html>

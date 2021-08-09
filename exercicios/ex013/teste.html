@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Maior valor</h1>
+
+    <p><button onclick="maiorValor()">Clique para começar</button></p>
+
+    <div id="res">
+        
+    </div>
+    <script>
+        function maiorValor(){
+            let valor1 = Number(window.prompt('Informe um número:'))
+            let valor2 = Number(window.prompt('Informe outro número:'))
+            let res = window.document.getElementById('res')
+            if (valor1 > valor2){
+                res.innerHTML = `Analisando os valores ${valor1} e ${valor2}, o maior valor é ${valor1}`
+            } else if ( valor1 < valor2){
+                res.innerHTML = `Analisando os valores ${valor1} e ${valor2}, o maior valor é ${valor2}`
+            } else {
+                res.innerHTML = `Analisando os valores ${valor1} e ${valor2}, ambos são <strong>IGUAIS</strong>.`
+            }
+        }   
+
+    </script>
+</body>
+</html>

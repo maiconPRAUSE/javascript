@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        main{
+            background-color:darkgray;
+            text-align: center;
+            width: 300px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.801);
+        }
+        </style>
+</head>
+<body>
+    <main>
+        <h1>É par ou é ímpar?</h1>
+        <button onclick="parImpar()">Clique para iniciar</button>
+        <div id="res">
+            <p>O resultado vai aparacer aqui...</p>
+        </div>
+    </main>
+    <script>
+        function parImpar(){
+            let num = Number(window.prompt('Informe um número:'))
+            let res = window.document.getElementById('res')
+            if (num % 2 == 0 ){
+                res.innerHTML = `<p>O número ${num} é <strong>PAR!</strong></p>`
+            } else {
+                res.innerHTML = `<p>O número ${num} é <strong>ÍMPAR!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
+

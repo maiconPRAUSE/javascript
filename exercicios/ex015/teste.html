@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Analisando data e hora do Sistema</h1>
+
+    <button onclick="dataHora()">Iniciar Análise</button>
+    <section id="res">
+        <p>Aqui vai aparecer algo...</p>
+    </section>
+    <script>
+        function dataHora(){
+            let meses = new Array('Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez')
+            let semana = new Array('Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb')
+            let res = window.document.getElementById('res')
+            let data = new Date()
+            let dia = data.getDate()
+            let mes = data.getMonth()
+            let ano = data.getFullYear()
+            let sem = data.getDay()
+            let hora = data.getHours()
+            let min = data.getMinutes()
+            let seg = data.getSeconds()
+
+            res.innerHTML += `<p>Dia:${dia}</p>`
+            res.innerHTML += `<p>Mês:${meses[mes]}</p>`
+            res.innerHTML += `<p>Ano:${ano}</p>`
+            res.innerHTML += `<p>Dia da Semana:${semana[sem]}</p>`
+            res.innerHTML += `<p>Hora:${hora}</p>`
+            res.innerHTML += `<p>Minutos:${min}</p>`
+            res.innerHTML += `<p>Segundos:${seg}</p>`
+        }
+    </script>
+</body>
+</html>

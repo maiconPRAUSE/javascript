@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com o sistema</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        button {
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        p{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Interagindo com o sistema</h1>
+    <button onclick="info()">Clique em mim</button>
+    <div id="res">
+        <p>Aqui vai aparecer algo...</p>
+    </div>
+    <script>
+        function info(){
+            let data = new Date()
+            let res = window.document.querySelector('div#res')
+            res.innerHTML += `<p>O que eu recebi do sistema foi ${data}.</p>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 28px;
+        }
+        
+        button {
+            font-size: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.781);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Média do Aluno v1.0 </h1>
+
+    <p><button onclick="media()">Calcular Média</button></p>
+
+    <div id="res"> 
+        O resultado vai aparecer aqui...
+    </div>
+
+    <script>
+        function media(){
+            let res = window.document.getElementById('res')
+            let nome = window.prompt('Qual é o nome do aluno?')
+            let nota1 = Number(window.prompt('Informe a primeira nota:'))
+            let nota2 = Number(window.prompt('Informe a segunda nota:'))
+            med = (nota1 + nota2) / 2
+            res.innerHTML = `<p>Calculando a média de <strong>${nome}</strong>.</p>`
+            res.innerHTML += `<p>As notas obtidas foram <strong>${nota1}</strong> e <strong>${nota2}</strong>.</p>`
+            res.innerHTML += `A média final será <mark>${med}</mark>`
+        }
+    </script>
+</body>
+</html>
